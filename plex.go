@@ -28,28 +28,36 @@ type PlexPlayer struct {
 
 type PlexMetadata struct {
 	LibrarySectionType   string `json:"librarySectionType"`
+	LibrarySectionID     int    `json:"librarySectionID"`
+
 	RatingKey            string `json:"ratingKey"`
-	Key                  string `json:"key"`
 	ParentRatingKey      string `json:"parentRatingKey"`
 	GrandparentRatingKey string `json:"grandparentRatingKey"`
-	GUID                 string `json:"guid"`
-	LibrarySectionID     int    `json:"librarySectionID"`
-	Type                 string `json:"type"`
-	Title                string `json:"title"`
-	GrandparentKey       string `json:"grandparentKey"`
+
+	Key                  string `json:"key"`
 	ParentKey            string `json:"parentKey"`
-	GrandparentTitle     string `json:"grandparentTitle"`
+	GrandparentKey       string `json:"grandparentKey"`
+
+	Title                string `json:"title"`
 	ParentTitle          string `json:"parentTitle"`
+	GrandparentTitle     string `json:"grandparentTitle"`
+
+	Thumb                string `json:"thumb"`
+	ParentThumb          string `json:"parentThumb"`
+	GrandparentThumb     string `json:"grandparentThumb"`
+
+	Art                  string `json:"art"`
+	ParentArt            string `json:"parentArt"`
+	GrandparentArt       string `json:"grandparentArt"`
+
+	GUID                 string `json:"guid"`
+	Type                 string `json:"type"`
+
 	Summary              string `json:"summary"`
 	Index                int    `json:"index"`
 	ParentIndex          int    `json:"parentIndex"`
 	RatingCount          int    `json:"ratingCount"`
-	Thumb                string `json:"thumb"`
-	ParentThumb          string `json:"parentThumb"`
-	GrandparentThumb     string `json:"grandparentThumb"`
-	Art                  string `json:"art"`
-	ParentArt            string `json:"parentArt"`
-	GrandparentArt       string `json:"grandparentArt"`
+
 	AddedAt              int    `json:"addedAt"`
 	UpdatedAt            int    `json:"updatedAt"`
 }
